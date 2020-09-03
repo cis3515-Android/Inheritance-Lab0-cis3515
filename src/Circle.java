@@ -1,17 +1,17 @@
 public class Circle extends Shape{
-    private int radius;
+    private double radius;
 
     public Circle(String name){
         super(name);
         this.radius = 0;
     }
 
-    public Circle(String name, int radius){
+    public Circle(String name, double radius){
         super(name);
         this.radius = radius;
     }
 
-    public void setDimensions(int radius){
+    public void setDimensions(double radius){
         this.radius = radius;
     }
 

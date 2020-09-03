@@ -11,7 +11,10 @@ public class main{
     }
 
     public static Square createSquare(){
-        
+        Square square = new Square("Square");
+        String [] dimensions = {"Length", "Height"};
+        double [] inputVals = getInput(2,"Square",dimensions);
+        square.setDimensions(inputVals[0], inputVals[1]);
     }
 
     public static Circle createCircle(){
@@ -26,18 +29,18 @@ public class main{
         System.out.println("Enter " + numOfInputs + "to create a " + shapeName + "\nType '-1' to exit...\n\n");
     }
 
-    private static void promptInput(int counter){
-        System.out.println("Enter input #" + counter + ":\t");
+    private static void promptInput(int counter, String[] dimension){
+        System.out.println("Enter input for " + dimension[counter] + ":\t");
     }
 
-    private static double[] getInput(int numOfInputs, String shapeName){
+    private static double[] getInput(int numOfInputs, String shapeName, String[] dimensions){
         promptUser(numOfInputs, shapeName);
         double inputArr[] = new double[numOfInputs-1];
         double input = 0;
         int counter = 1;
         Scanner sc = new Scanner(System.in);
         do{
-            promptInput(counter);
+            promptInput(counter,dimensions);
             while(!sc.hasNextDouble()){
                 System.out.println("Please enter a valid double...\n\n");
 

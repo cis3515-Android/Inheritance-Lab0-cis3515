@@ -1,6 +1,6 @@
 public class Square extends Shape{
-    private int length;
-    private int height;
+    private double length;
+    private double height;
 
     public Square(String name){
         super(name);
@@ -8,14 +8,14 @@ public class Square extends Shape{
         this.height = 0;
     }
 
-    public Square(String name, int length, int height){
+    public Square(String name, double length, double height){
         super(name);
         this.length = length;
         this.height = height;
 
     }
 
-    public void setDimensions(int length, int height){
+    public void setDimensions(double length, double height){
         this.length = length;
         this.height = height;
     }
