@@ -25,6 +25,10 @@ public class Square extends Shape{
         System.out.println("--Dimensions--\n\tLength: " + this.length + "\n\tHeight: " + this.height);
     }
 
+    /**
+        @return the area of the shape
+    */
+
     @Override
     public double getArea(){
         return length * height;
