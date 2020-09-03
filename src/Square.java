@@ -22,11 +22,12 @@ public class Square extends Shape{
 
     @Override
     public void printDimensions(){
-        System.out.println("--Dimensions--\n\tLength: " + this.length + "\n\tHeight: " + this.height);
+        System.out.println("--Dimensions--\n\tLength: " + this.length + "\n\tHeight: " + this.height +
+                "\n\tArea: " + getArea());
     }
 
     /**
-        @return the area of the shape
+        @return the area of a square
     */
 
     @Override
