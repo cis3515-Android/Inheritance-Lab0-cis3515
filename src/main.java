@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/**
+ * Todo:
+ *      1. fix equilateral triangle area method
+ *      2. change so main function prompts for double
+ *      3. use name modifier in printDimension methods of all shape classes
+ *      4. perform houseKeeping comments 
+ */
 public class main{
     public static void main(String args[]){
         createShape();
