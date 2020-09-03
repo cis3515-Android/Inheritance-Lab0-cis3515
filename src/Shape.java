@@ -5,10 +5,16 @@ public class Shape{
         this.name = name;
     }
 
+    /*
+     * @return the name of the shape
+     */
     public String getName(){
         return name;
     }
 
+    /*
+        @return the area of the shape
+     */
     public double getArea(){
         return 0.0;
     }
