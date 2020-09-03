@@ -4,6 +4,15 @@ public class Square extends Shape{
 
     public Square(String name){
         super(name);
+        this.length = 0;
+        this.height = 0;
+    }
+
+    public Square(String name, int length, int height){
+        super(name);
+        this.length = length;
+        this.height = height;
+
     }
 
     public void setDimensions(int length, int height){
