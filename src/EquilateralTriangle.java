@@ -14,7 +14,7 @@ public class EquilateralTriangle extends Triangle{
     @Override
     public void printDimensions(){
         System.out.println("--Dimensions--\n\tSides Length: " + allSides +
-                "\n\tArea: " );
+                "\n\tArea: " + getArea());
     }
 
     @Override
