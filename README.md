@@ -3,7 +3,7 @@
 ### TODO:
    
   - [x] create shape parent class </br>
-  - [ ] create square subclass </br>
-  - [ ] create circle subclass </br>
-  - [ ] create triangle subclass </br>
-  - [ ] create main class </br>
+  - [x] create square subclass </br>
+  - [x] create circle subclass </br>
+  - [x] create triangle subclass </br>
+  - [x] create main class </br>
