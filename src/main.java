@@ -9,9 +9,9 @@ import java.util.Scanner;
  */
 public class main{
     public static void main(String args[]){
-        //createShape();
-        //createSquare();
-        //createCircle();
+        createShape();
+        createSquare();
+        createCircle();
         createTriangle();
         createEquilateralTriangle();
     }
@@ -66,23 +66,29 @@ public class main{
     private static double[] getInput(int numOfInputs, String shapeName, String[] dimensions){
         promptUser(numOfInputs, shapeName);
         double inputArr[] = new double[numOfInputs];
-        double input = 0;
+        double input = 1;
         int counter = 0;
         Scanner sc = new Scanner(System.in);
 
+
         do{
-            promptInput(counter,dimensions);
-            while(!sc.hasNextDouble()){
-                sc.next();
-                System.out.println("Please enter a valid double...\n\n");
-                promptInput(counter, dimensions);
-            }
+             promptInput(counter,dimensions);
+
+             while(!sc.hasNextDouble()) {
+                 sc.next();
+                 System.out.println("Please enter a valid double...\n\n");
+                 promptInput(counter, dimensions);
+             }
+
 
             input = sc.nextDouble();
 
             if (input == -1){
                 System.out.println("GoodBye");
                 System.exit(1);
+            } else if (input == 0 || input < -1){
+                System.out.println("Please enter a valid double...\n\n");
+                continue;
             }
 
            inputArr[counter] = input;
