@@ -1,11 +1,8 @@
 import java.util.Scanner;
 
 /**
- * Todo:
- *      1. fix equilateral triangle area method
- *      2. change so main function prompts for double
- *      3. use name modifier in printDimension methods of all shape classes
- *      4. perform houseKeeping comments 
+ * @author Terence Peterson
+ * Main class that calls on respective method to create, declare, and display each value in the Shape hierarchy
  */
 public class main{
     public static void main(String args[]){
@@ -59,10 +56,22 @@ public class main{
         System.out.println("\n\nEnter " + numOfInputs + " dimensions to create a " + shapeName + "\nType '-1' to exit...\n");
     }
 
+    /**
+     *
+     * @param counter increments the dimension array, to grab the appropriate dimension to prompt user for
+     * @param dimension array that holds string list of all dimensions per shape
+     */
     private static void promptInput(int counter, String[] dimension){
-        System.out.println("Enter input for " + dimension[counter] + ":\t");
+        System.out.println("Enter a 'double' input for " + dimension[counter] + ":\t");
     }
 
+    /**
+     *
+     * @param numOfInputs the size limit for the number of inputs to be asked for specific shape
+     * @param shapeName the name of the respective shape
+     * @param dimensions an array containing string for each desired dimension to ask user for
+     * @return an array with double values for each dimension for the respective shape
+     */
     private static double[] getInput(int numOfInputs, String shapeName, String[] dimensions){
         promptUser(numOfInputs, shapeName);
         double inputArr[] = new double[numOfInputs];
@@ -74,6 +83,7 @@ public class main{
         do{
              promptInput(counter,dimensions);
 
+             // handles bad input (i.e. not double)
              while(!sc.hasNextDouble()) {
                  sc.next();
                  System.out.println("Please enter a valid double...\n\n");
@@ -86,6 +96,7 @@ public class main{
             if (input == -1){
                 System.out.println("GoodBye");
                 System.exit(1);
+                // shapes can't have negative sides, or sides of no length
             } else if (input == 0 || input < -1){
                 System.out.println("Please enter a valid double...\n\n");
                 continue;

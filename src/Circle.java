@@ -6,11 +6,6 @@ public class Circle extends Shape{
         this.radius = 0;
     }
 
-    public Circle(String name, double radius){
-        super(name);
-        this.radius = radius;
-    }
-
     public void setDimensions(double radius){
         this.radius = radius;
     }
@@ -18,12 +13,12 @@ public class Circle extends Shape{
     @Override
     public void printDimensions(){
         double circumference = (2 * Math.PI) * this.radius;
-        System.out.println("--Dimensions--\n\tRadius: " + this.radius +
+        System.out.println("Shape: [ " + getName() + " ] " + " --Dimensions--\n\tRadius: " + this.radius +
                 "\n\tCircumference: " + circumference + "\n\tArea: " + getArea());
     }
 
     /**
-     * @return the area of a Circle
+     * @return the area of a Circle as double
      */
     @Override
     public double getArea(){

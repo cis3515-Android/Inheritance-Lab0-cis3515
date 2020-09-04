@@ -1,5 +1,6 @@
 public class EquilateralTriangle extends Triangle{
 
+
     private double allSides;
 
     public EquilateralTriangle(String name){
@@ -13,10 +14,13 @@ public class EquilateralTriangle extends Triangle{
 
     @Override
     public void printDimensions(){
-        System.out.println("--Dimensions--\n\tSides Length: " + allSides +
+        System.out.println("Shape: [ " + getName() + " ] " + " --Dimensions--\n\tSides Length: " + allSides +
                 "\n\tArea: " + getArea());
     }
 
+    /**
+     @return the area of a equilateral triangle as double
+     */
     @Override
     public double getArea(){
         return (Math.sqrt(3) / 4) * (this.allSides * this.allSides);

@@ -1,14 +1,15 @@
 public class Triangle extends Shape{
-
+    /**
+     * @sideA A side of triangle
+     * @sideB B side of triangle
+     * @sideC C side of triangle
+     * @PERIMETER perimeter = half of sideA + sideB + sideC
+     */
     private double sideA;
     private double sideB;
     private double sideC;
     private double PERIMETER;
 
-    private enum Shape{
-
-
-    }
     public Triangle(String name){
         super(name);
         this.sideA = 0;
@@ -22,12 +23,13 @@ public class Triangle extends Shape{
         this.sideB = sideB;
         this.sideC = sideC;
         this.PERIMETER = 0.5 * (sideA + sideB + sideC);
+
     }
 
     @Override
     public void printDimensions(){
 
-        System.out.println("--Dimensions--\n\tsideA: " + this.sideA
+        System.out.println("Shape: [ " + getName() + " ] " + " --Dimensions--\n\tsideA: " + this.sideA
         + "\n\tsideB: " + this.sideB + "\n\tsideC: " + this.sideC + "\n\tPerimeter: " + this.PERIMETER +
          "\n\tArea: " + getArea());
 
@@ -36,6 +38,9 @@ public class Triangle extends Shape{
         }
     }
 
+    /**
+     * @return area of Triangle as double
+     */
     @Override
     public double getArea(){
         System.out.println(PERIMETER);

@@ -8,13 +8,6 @@ public class Square extends Shape{
         this.height = 0;
     }
 
-    public Square(String name, double length, double height){
-        super(name);
-        this.length = length;
-        this.height = height;
-
-    }
-
     public void setDimensions(double length, double height){
         this.length = length;
         this.height = height;
@@ -22,14 +15,13 @@ public class Square extends Shape{
 
     @Override
     public void printDimensions(){
-        System.out.println("--Dimensions--\n\tLength: " + this.length + "\n\tHeight: " + this.height +
+        System.out.println("Shape: [ " + getName() + " ] " + " --Dimensions--\n\tLength: " + this.length + "\n\tHeight: " + this.height +
                 "\n\tArea: " + getArea());
     }
 
     /**
-        @return the area of a square
+        @return the area of a square as double
     */
-
     @Override
     public double getArea(){
         return length * height;
